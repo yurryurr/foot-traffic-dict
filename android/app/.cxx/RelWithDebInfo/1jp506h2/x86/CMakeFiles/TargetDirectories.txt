@@ -1,0 +1,2 @@
+E:/Programs/dict_foot_traffic/android/app/.cxx/RelWithDebInfo/1jp506h2/x86/CMakeFiles/edit_cache.dir
+E:/Programs/dict_foot_traffic/android/app/.cxx/RelWithDebInfo/1jp506h2/x86/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+E:/Programs/dict_foot_traffic/android/app/.cxx/Debug/k313ol4b/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/Programs/dict_foot_traffic/android/app/.cxx/Debug/k313ol4b/armeabi-v7a/CMakeFiles/rebuild_cache.dir
