@@ -170,9 +170,6 @@ class UsersNotifier extends StateNotifier<List<User>> {
     }
     val = val.reversed.toList();
     String csv1 = const csv.ListToCsvConverter().convert(val);
-    /**
-     * SENDING NOW VIA EMAIL
-     */
     final Email email = Email(
       body: csv1,
       subject: 'DICT Foot Traffic as of ${DateTime.now()}',

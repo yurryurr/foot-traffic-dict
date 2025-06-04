@@ -130,7 +130,6 @@ content = FutureBuilder<List<User>>(future: listings, builder:
           return ListTile(
             title: Text(listOfUsers[index].fullName.toUpperCase()),
             onTap: () {
-              // TODO: WHEN CLICKED
               //Opens the detailed version
             },
             subtitle: Text(

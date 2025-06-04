@@ -3,6 +3,7 @@ import 'package:dict_foot_traffic/Providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+// ignore: must_be_immutable
 class UserList extends ConsumerStatefulWidget {
   UserList({
     super.key,
@@ -20,14 +21,6 @@ class UserList extends ConsumerStatefulWidget {
 }
 
 class _UserListState extends ConsumerState<UserList> {
-  // User ddval = User(
-  //   brgy: '',
-  //   contact: '',
-  //   use: Uses.internet,
-  //   fullName: 'NONE',
-  //   age: 10,
-  //   gender: 'm',
-  // );
   @override
   Widget build(BuildContext context) {
     final vals = ref.read(usersProvider).toList();
@@ -35,7 +28,6 @@ class _UserListState extends ConsumerState<UserList> {
     return DropdownButton(
       dropdownColor: Colors.black26,
       value: widget.ddval.fullName,
-
       items: [
         for (var v in vals)
           DropdownMenuItem(
@@ -45,14 +37,6 @@ class _UserListState extends ConsumerState<UserList> {
             ),
           ),
       ],
-      // vals
-      //     .map(
-      //       (e) => DropdownMenuItem(
-      //         value: e,
-      //         child: Text(e.fullName),
-      //       ),
-      //     )
-      //     .toList(),
       onChanged: (value) {
         if (value == null) {
           return;
@@ -62,27 +46,5 @@ class _UserListState extends ConsumerState<UserList> {
         });
       },
     );
-    // return DropdownButton(
-    //   dropdownColor: Colors.black26,
-    //   value: ddval,
-    //   items:
-    //   vals
-    //       .map(
-    //         (e) => DropdownMenuItem(
-    //           value: e,
-    //           child: Text(e.fullName),
-    //         ),
-    //       )
-    //       .toList(),
-    //   onChanged: (value) {
-    //     if (value == null) {
-    //       return;
-    //     }
-    //     setState(() {
-    //       ddval = value;
-    //     });
-    //   },
-    // );
-    //return SizedBox(child: DropdownButton(items: , onChanged: onChanged),);
   }
 }

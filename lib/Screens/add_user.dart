@@ -86,9 +86,7 @@ class _AddUserScreenState extends ConsumerState<AddUserScreen> {
         duplicate: onlyUpdating,
       ),
     );
-    //print(await refer.listed());
-    // ref.read(usersProvider.notifier).addUser(
-    //     _bgry!, _contact!, use, _enteredName!, age, _gender!, onlyUpdating);
+    // ignore: use_build_context_synchronously
     Navigator.of(context).pop(true);
   }
 
@@ -122,11 +120,6 @@ class _AddUserScreenState extends ConsumerState<AddUserScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // final vals = ref.read(usersProvider);
-    // if (vals.isNotEmpty) {
-    //   widget.ddval = vals.first;
-    // }
-    // final users = ref.watch(usersProvider.notifier);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add User'),
@@ -145,43 +138,6 @@ class _AddUserScreenState extends ConsumerState<AddUserScreen> {
                     optionClicked: _optionClicked,
                   ),
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                //   child: DropdownButtonFormField(
-                //       decoration: const InputDecoration(
-                //         label: Text(
-                //             "Barangay"), //TODO: Instead of DropDown make it searchable
-                //       ),
-                //       dropdownColor: Theme.of(context).colorScheme.onPrimary,
-                //       value: barangays.Barangays.ZoneIVPoblacion,
-                //       items: barangays.Barangays.values
-                //           .map(
-                //             (e) => DropdownMenuItem(
-                //               value: e,
-                //               child: Text(e.name.toUpperCase()),
-                //             ),
-                //           )
-                //           .toList(),
-                //       onChanged: (val) {}),
-                // child: TextFormField(
-                //   style: TextStyle(fontSize: 25),
-                //   controller: _brgyController,
-                //   decoration:
-                //       const InputDecoration(label: Text("Barangay")),
-                //   validator: (value) {
-                //     if (value == null ||
-                //         value.isEmpty ||
-                //         value.trim().length <= 1 ||
-                //         value.trim().length > 50) {
-                //       return 'Please input your barangay';
-                //     }
-                //     return null; //no errors in the input
-                //   },
-                //   onSaved: (newValue) {
-                //     _bgry = newValue!;
-                //   },
-                // ),
-                // ),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: TextFormField(
@@ -247,7 +203,6 @@ class _AddUserScreenState extends ConsumerState<AddUserScreen> {
                   gotInitialVal: _bgry,
                   onSelected: (String val) {
                     _bgry = val;
-                    print(_bgry);
                   },
                 ),
                 Padding(

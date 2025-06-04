@@ -42,13 +42,4 @@ class User {
       'duplicate': duplicate,
     };
   }
-  /**
-   * END OF TRIAL
-   */
 }
-
-// class User {
-//   const User({required this.age, required this.name});
-//   final String name;
-//   final int age;
-// }

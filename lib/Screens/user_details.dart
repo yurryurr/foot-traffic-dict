@@ -5,7 +5,6 @@ class UserDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: DO THIS
     return const Placeholder();
   }
 }

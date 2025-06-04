@@ -10,7 +10,6 @@ class RegisterUser extends StatefulWidget {
 class _RegisterUserState extends State<RegisterUser> {
   @override
   Widget build(BuildContext context) {
-    // TODO: DO THIS
     throw UnimplementedError();
   }
 }

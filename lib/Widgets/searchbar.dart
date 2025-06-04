@@ -67,8 +67,6 @@ class Searchbar extends StatelessWidget {
           checkDups.add(x!);
         }
       }
-
-      //return showAutoComplete.map((e) => e!,);
       return checkDups.map(
         (e) => e,
       );
